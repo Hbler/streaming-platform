@@ -1,0 +1,93 @@
+/* HIGHLIGHT */
+.highlight {
+  width: 100vw;
+  padding: 10% 5%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  z-index: 0;
+  position: absolute;
+  top: 0;
+}
+
+.highlight__bg {
+  background-image: url("../img/movies/love_death_robots.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.highlight img {
+  margin: 1% 0;
+  width: 60%;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight__title {
+  margin: 2% 0;
+  font-weight: 400;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight__sinopsis {
+  margin: 1% 0 2%;
+  border: 1px solid transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight__sinopsis p {
+  width: 70%;
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+
+.highlight__btns {
+  margin: 1% 0;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight__btns button {
+  padding: 2% 5%;
+  font-size: 0.7rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hl__btn--one {
+  background-color: #fff;
+}
+
+.hl__btn--two {
+  color: #fff;
+  background-color: #fff5;
+}
+
+.highlight__rating {
+  margin-bottom: 4%;
+  display: flex;
+  justify-content: end;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight__rating p {
+  right: -10%;
+  width: 20%;
+  padding-left: 2%;
+  font-size: 0.7rem;
+  font-weight: 500;
+  position: absolute;
+  border-left: 4px solid white;
+  background-color: #fff5;
+}
