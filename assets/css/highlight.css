@@ -11,14 +11,16 @@
 }
 
 .highlight__bg {
-  background-image: url("../img/movies/love_death_robots.png");
-  background-size: cover;
-  background-position: center;
-  position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+  width: 100.2%;
+  transform: translateX(-0.1%);
+  background-image: url("../img/movies/love_death_robots.png");
+  background-size: cover;
+  background-position: center;
+  position: absolute;
 }
 
 .highlight img {
@@ -29,7 +31,7 @@
 }
 
 .highlight__title {
-  margin: 2% 0;
+  margin: 2% 0 0;
   font-weight: 400;
   font-size: 0.9rem;
   position: relative;
@@ -71,6 +73,7 @@
 .hl__btn--two {
   color: #fff;
   background-color: #fff5;
+  backdrop-filter: blur(5px);
 }
 
 .highlight__rating {
@@ -82,12 +85,43 @@
 }
 
 .highlight__rating p {
-  right: -10%;
-  width: 20%;
+  right: -6%;
+  width: 15%;
   padding-left: 2%;
   font-size: 0.7rem;
   font-weight: 500;
   position: absolute;
   border-left: 4px solid white;
   background-color: #fff5;
+}
+
+@media (min-width: 700px) {
+  .highlight img {
+    max-width: 420px;
+  }
+
+  .highlight__title {
+    margin: 1% 0 0;
+    font-size: 1rem;
+  }
+
+  .highlight__sinopsis p {
+    width: 40%;
+    font-size: 0.9rem;
+  }
+
+  .highlight__btns button {
+    margin: 0 1%;
+    padding: 1% 5%;
+    font-size: 0.9rem;
+  }
+
+  .highlight__rating {
+    margin-bottom: 2%;
+  }
+
+  .highlight__rating p {
+    padding: 1%;
+    font-size: 00.8rem;
+  }
 }

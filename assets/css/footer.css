@@ -10,6 +10,7 @@ footer {
 
 .socials {
   width: 70%;
+  padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -45,6 +46,7 @@ footer p {
 }
 
 footer button {
+  margin-left: 4%;
   padding: 2%;
   color: #808080;
   border: none;
@@ -56,7 +58,15 @@ footer button:hover {
   color: #fff;
 }
 
-footer p,
+footer p {
+  width: 100%;
+  padding: 1%;
+  margin: 1% 0 3%;
+  font-size: 0.9rem;
+  color: #808080;
+  text-align: right;
+}
+
 footer a {
   color: #808080;
 }
@@ -73,4 +83,32 @@ footer a {
 
 .clear {
   display: none;
+}
+
+@media (min-width: 700px) {
+  .socials {
+    width: 30%;
+    margin: 1%;
+    padding: 0 4%;
+  }
+
+  .links {
+    margin: 1%;
+  }
+
+  .links a {
+    width: 30%;
+  }
+
+  footer button {
+    margin: 1% 0 1% 4%;
+    padding: 1%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .links a {
+    width: 25%;
+    font-size: 0.8rem;
+  }
 }

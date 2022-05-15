@@ -15,6 +15,8 @@ const main = document.querySelector("main");
 let n = 1;
 
 //// Listeners
+document.addEventListener("scroll", debounce(storeScroll));
+
 navBtn.addEventListener("click", () => {
   showList(navList);
 });
@@ -34,6 +36,31 @@ searchBar.addEventListener("keydown", (e) => {
 });
 
 //// Funcitons
+/// source https://developpaper.com/css-application-based-on-user-scrolling/
+// The debounce function receives our function as a parameter
+function debounce(fn) {
+  // This holds the requestAnimationFrame reference, so we can cancel it if we wish
+  let frame;
+
+  // The debounce function returns a new function that can receive a variable number of arguments
+  return (...params) => {
+    // If the frame variable has been defined, clear it now, and queue for next frame
+    if (frame) {
+      cancelAnimationFrame(frame);
+    }
+
+    // Queue our function call for the next frame
+    frame = requestAnimationFrame(() => {
+      // Call our function and pass any params we received
+      fn(...params);
+    });
+  };
+}
+
+function storeScroll() {
+  document.documentElement.dataset.scroll = window.scrollY;
+}
+
 function showList(node) {
   node.classList.toggle("hidden");
   node.classList.toggle("list__visible");
@@ -137,5 +164,6 @@ function createLists() {
 }
 
 //// Flow
+storeScroll();
 createLists();
 setInterval(alternateHighlight, 10000);

@@ -23,16 +23,17 @@
 
 @keyframes appear-n-scale {
   0% {
-    left: 100%;
+    right: 50%;
     opacity: 0;
-    width: 20vw;
+    width: 20%;
   }
   20% {
-    opacity: 0;
-    width: 20vw;
+    opacity: 0.2;
+    width: 120%;
   }
   100% {
-    left: -200%;
-    width: 60vw;
+    right: 100%;
+    opacity: 1;
+    width: 200%;
   }
 }
