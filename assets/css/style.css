@@ -41,6 +41,10 @@ section {
   overflow: scroll;
 }
 
+.list__options img {
+  cursor: pointer;
+}
+
 @media (min-width: 700px) {
   .list {
     margin-bottom: 3%;
